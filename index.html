@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>The Cary Pub — Not Your Ordinary Pub</title>
+  <meta name="description" content="The Cary Pub — Cary NC's neighborhood pub since 2013. House-made food, legendary wings, cold beer, and fifteen flat screens. Come as you are.">
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+
+  <!-- Background glow -->
+  <div class="bg-glow"></div>
+
+  <!-- Easter Egg Overlay -->
+  <div id="easter-egg" class="easter-egg-overlay">
+    <div style="text-align:center">
+      <div class="emoji">🦬</div>
+      <div class="title">You found the Buffalo!</div>
+      <div class="subtitle">Show this to your bartender for a surprise 🍺</div>
+    </div>
+  </div>
+
+  <!-- =================== NAV =================== -->
+  <nav class="site-nav">
+    <div class="nav-inner">
+      <a href="#home" class="nav-logo" data-nav="home">
+        <!-- Beer mug SVG logo -->
+        <svg class="nav-logo-img" width="36" height="36" viewBox="0 0 64 64" fill="none">
+          <rect x="12" y="16" width="30" height="38" rx="3" fill="#F59E0B" stroke="#92400E" stroke-width="2"/>
+          <rect x="16" y="20" width="22" height="30" rx="1" fill="#FDE68A" opacity="0.5"/>
+          <path d="M42 24h8a4 4 0 014 4v10a4 4 0 01-4 4h-8" stroke="#92400E" stroke-width="2" fill="none"/>
+          <ellipse cx="27" cy="14" rx="16" ry="6" fill="#fff" opacity="0.9"/>
+          <ellipse cx="22" cy="12" rx="4" ry="3" fill="#fff"/>
+          <ellipse cx="32" cy="11" rx="3" ry="2.5" fill="#fff"/>
+          <rect x="20" y="28" width="2" height="12" rx="1" fill="#fff" opacity="0.3"/>
+          <rect x="26" y="26" width="2" height="16" rx="1" fill="#fff" opacity="0.2"/>
+        </svg>
+        <span class="nav-logo-text">The Cary Pub</span>
+      </a>
+      <div class="nav-links">
+        <button class="nav-link active" data-nav="home">Home</button>
+        <button class="nav-link" data-nav="specials">Specials</button>
+        <button class="nav-link" data-nav="wings">Wings</button>
+        <button class="nav-link" data-nav="menu">Menu</button>
+        <button class="nav-link" data-nav="info">Visit</button>
+      </div>
+    </div>
+  </nav>
+
+  <!-- =================== HERO =================== -->
+  <section id="home" class="hero">
+    <div class="hero-glow"></div>
+
+    <div class="hero-logo fade-in" data-egg>
+      <svg width="100" height="100" viewBox="0 0 64 64" fill="none" style="cursor:pointer">
+        <rect x="12" y="16" width="30" height="38" rx="3" fill="#F59E0B" stroke="#92400E" stroke-width="2"/>
+        <rect x="16" y="20" width="22" height="30" rx="1" fill="#FDE68A" opacity="0.5"/>
+        <path d="M42 24h8a4 4 0 014 4v10a4 4 0 01-4 4h-8" stroke="#92400E" stroke-width="2" fill="none"/>
+        <ellipse cx="27" cy="14" rx="16" ry="6" fill="#fff" opacity="0.9"/>
+        <ellipse cx="22" cy="12" rx="4" ry="3" fill="#fff"/>
+        <ellipse cx="32" cy="11" rx="3" ry="2.5" fill="#fff"/>
+        <rect x="20" y="28" width="2" height="12" rx="1" fill="#fff" opacity="0.3"/>
+        <rect x="26" y="26" width="2" height="16" rx="1" fill="#fff" opacity="0.2"/>
+      </svg>
+    </div>
+
+    <div class="hero-est fade-in-d1">EST. 2013</div>
+
+    <h1 class="neon neon-flicker fade-in-d2">The Cary Pub</h1>
+
+    <div class="hero-tagline fade-in-d3">Not Your Ordinary Pub 🦬</div>
+
+    <div class="hero-btns fade-in-d4">
+      <button class="btn-primary" data-nav="specials">Today's Specials</button>
+      <button class="btn-outline" data-nav="menu">View Full Menu</button>
+    </div>
+
+    <div class="scroll-hint">↓</div>
+  </section>
+
+  <!-- =================== SPECIALS =================== -->
+  <section id="specials" class="specials-section">
+    <h2 class="neon">📋 Daily Specials Board</h2>
+    <p class="subtitle">Flip through the week — something good every day</p>
+
+    <div id="chalkboard" class="chalkboard">
+      <div style="display:flex;align-items:center;justify-content:center;gap:16px;margin-bottom:8px">
+        <button id="chalk-prev" class="chalk-nav-btn">‹</button>
+        <div>
+          <div id="chalk-label" class="chalk-label"></div>
+          <div id="chalk-day" class="chalk-day"></div>
+        </div>
+        <button id="chalk-next" class="chalk-nav-btn">›</button>
+      </div>
+      <hr class="chalk-hr">
+      <div id="chalk-food" class="chalk-food"></div>
+      <div id="chalk-drinks"></div>
+      <div id="chalk-dots" class="chalk-dots"></div>
+    </div>
+  </section>
+
+  <!-- =================== WINGS =================== -->
+  <section id="wings" class="wings-section">
+    <div class="wings-box">
+      <div style="text-align:center;margin-bottom:32px">
+        <div style="font-size:48px;margin-bottom:8px">🍗</div>
+        <h3 class="neon">Available Wing Choices</h3>
+        <p class="wings-subtitle">Served with celery and your choice of ranch or blue cheese</p>
+      </div>
+
+      <div class="wings-label">Sizes & Pricing</div>
+      <div id="wing-sizes" class="wings-sizes"></div>
+
+      <div class="wings-label">Flavors</div>
+      <div id="wing-flavors" class="wings-flavors"></div>
+
+      <div class="wings-note">Extra dressings +$0.50</div>
+    </div>
+  </section>
+
+  <!-- =================== MENU =================== -->
+  <section id="menu" class="menu-section">
+    <div class="header-sub">Made In-House</div>
+    <h2 class="neon">The Menu</h2>
+    <div class="section-divider"></div>
+
+    <div class="menu-tabs">
+      <button class="menu-tab active" data-tab="appetizers">APPETIZERS</button>
+      <button class="menu-tab" data-tab="soupsAndSalads">SOUPS & SALADS</button>
+      <button class="menu-tab" data-tab="sandwiches">SANDWICHES</button>
+      <button class="menu-tab" data-tab="burgers">BURGERS</button>
+    </div>
+
+    <div id="menu-items" class="menu-items"></div>
+
+    <div class="consumer-advisory">
+      *Consumer Advisory — Consuming raw or undercooked meats, poultry, seafood, shellfish or eggs may increase your risk of food borne illness, especially if you have certain medical conditions.
+    </div>
+  </section>
+
+  <!-- =================== VISIT =================== -->
+  <section id="info" class="info-section">
+    <div class="info-inner">
+      <div class="header-sub">Come As You Are</div>
+      <h2 class="neon">Your Neighborhood Pub</h2>
+      <div class="section-divider"></div>
+
+      <div class="info-grid">
+        <div class="info-about">
+          <p id="about-p1"></p>
+          <p id="about-p2"></p>
+        </div>
+        <div id="info-cards" class="info-cards"></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- =================== FOOTER =================== -->
+  <footer class="site-footer">
+    <svg width="48" height="48" viewBox="0 0 64 64" fill="none">
+      <rect x="12" y="16" width="30" height="38" rx="3" fill="#F59E0B" stroke="#92400E" stroke-width="2"/>
+      <rect x="16" y="20" width="22" height="30" rx="1" fill="#FDE68A" opacity="0.5"/>
+      <path d="M42 24h8a4 4 0 014 4v10a4 4 0 01-4 4h-8" stroke="#92400E" stroke-width="2" fill="none"/>
+      <ellipse cx="27" cy="14" rx="16" ry="6" fill="#fff" opacity="0.9"/>
+      <ellipse cx="22" cy="12" rx="4" ry="3" fill="#fff"/>
+      <ellipse cx="32" cy="11" rx="3" ry="2.5" fill="#fff"/>
+      <rect x="20" y="28" width="2" height="12" rx="1" fill="#fff" opacity="0.3"/>
+      <rect x="26" y="26" width="2" height="16" rx="1" fill="#fff" opacity="0.2"/>
+    </svg>
+    <div class="footer-tagline">Good food. Cold beer. Great people.</div>
+    <div class="footer-copy">© <span id="footer-year"></span> The Cary Pub — Est. 2013, Cary NC</div>
+    <div class="footer-egg" data-egg>🦬 psst... keep clicking</div>
+  </footer>
+
+  <!-- Scripts: data first, then logic -->
+  <script src="js/site-data.js"></script>
+  <script src="js/main.js"></script>
+
+</body>
+</html>
