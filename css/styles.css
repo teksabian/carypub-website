@@ -116,7 +116,7 @@ a:hover { text-decoration: underline; }
 }
 .site-nav.scrolled .nav-logo-text { font-size: 16px; }
 
-.nav-links { display: flex; gap: 16px; overflow-x: auto; }
+.nav-links { display: flex; gap: 16px; overflow-x: auto; align-items: center; }
 .nav-link {
   background: none; border: none; border-bottom: 2px solid transparent;
   color: var(--gold-dim); font-family: var(--font-display);
@@ -444,7 +444,7 @@ a:hover { text-decoration: underline; }
   font-size: 20px; padding: 6px 4px; line-height: 1;
   opacity: 0.7; transition: opacity 0.2s, transform 0.2s;
 }
-.theme-toggle:hover { opacity: 1; transform: scale(1.15); }
+.theme-toggle:hover { opacity: 1; }
 
 /* ============================================================
    DARK THEME
