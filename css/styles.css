@@ -378,6 +378,130 @@ a:hover { text-decoration: underline; }
 .easter-egg-overlay .subtitle { font-family: var(--font-hand); font-size: 20px; color: var(--gold-dim); margin-top: 8px; }
 
 /* ============================================================
+   THEME TOGGLE
+   ============================================================ */
+.theme-toggle {
+  background: none; border: none; cursor: pointer;
+  font-size: 20px; padding: 6px 4px; line-height: 1;
+  opacity: 0.7; transition: opacity 0.2s, transform 0.2s;
+}
+.theme-toggle:hover { opacity: 1; transform: scale(1.15); }
+
+/* ============================================================
+   DARK THEME
+   ============================================================ */
+[data-theme="dark"] {
+  --gold: #F59E0B;
+  --gold-dark: #D97706;
+  --gold-dim: #a89968;
+  --cream: #e8dcc8;
+  --cream-light: #d4c5a0;
+  --bg: #0f0e0b;
+  --bg-card: rgba(255,255,255,0.03);
+  --border-subtle: rgba(255,255,255,0.06);
+  --border-gold: rgba(245,158,11,0.12);
+  --red: #DC2626;
+  --wood: #5c3a1e;
+  --wood-dark: #3d2610;
+}
+
+/* Dark: scrollbar */
+[data-theme="dark"] ::-webkit-scrollbar-track { background: #1a1a16; }
+
+/* Dark: background glow */
+[data-theme="dark"] .bg-glow {
+  background:
+    radial-gradient(ellipse at 20% 50%, rgba(146,64,14,0.06) 0%, transparent 50%),
+    radial-gradient(ellipse at 80% 20%, rgba(245,158,11,0.04) 0%, transparent 40%),
+    radial-gradient(ellipse at 50% 80%, rgba(92,58,30,0.08) 0%, transparent 50%);
+}
+
+/* Dark: neon glow */
+[data-theme="dark"] .neon {
+  text-shadow: 0 0 7px rgba(245,158,11,0.27), 0 0 10px rgba(245,158,11,0.2), 0 0 21px rgba(245,158,11,0.13);
+}
+
+/* Dark: nav */
+[data-theme="dark"] .site-nav {
+  background: rgba(15,14,11,0.7);
+  border-bottom-color: rgba(245,158,11,0.05);
+}
+[data-theme="dark"] .site-nav.scrolled {
+  background: rgba(15,14,11,0.95);
+  border-bottom-color: rgba(245,158,11,0.2);
+}
+
+/* Dark: hero glow */
+[data-theme="dark"] .hero-glow {
+  background: radial-gradient(circle, rgba(245,158,11,0.08) 0%, transparent 70%);
+}
+
+/* Dark: buttons */
+[data-theme="dark"] .btn-primary {
+  color: #1a1a1a;
+  box-shadow: 0 4px 20px rgba(245,158,11,0.3);
+}
+[data-theme="dark"] .btn-primary:hover {
+  box-shadow: 0 8px 30px rgba(245,158,11,0.4);
+}
+[data-theme="dark"] .btn-outline {
+  border-color: rgba(245,158,11,0.4);
+}
+[data-theme="dark"] .btn-outline:hover {
+  background: rgba(245,158,11,0.05);
+}
+
+/* Dark: chalkboard */
+[data-theme="dark"] .chalkboard {
+  box-shadow: 0 8px 32px rgba(0,0,0,0.5), inset 0 0 60px rgba(0,0,0,0.3);
+}
+[data-theme="dark"] .chalk-dot.other { background: #5c5c3c; }
+
+/* Dark: wings */
+[data-theme="dark"] .wings-box {
+  background: linear-gradient(180deg, rgba(146,64,14,0.12) 0%, rgba(0,0,0,0) 100%);
+  border-color: rgba(245,158,11,0.15);
+}
+[data-theme="dark"] .wing-size-card,
+[data-theme="dark"] .flavor-card,
+[data-theme="dark"] .info-card {
+  background: var(--bg-card);
+  box-shadow: none;
+}
+[data-theme="dark"] .flavor-card {
+  border-color: rgba(255,255,255,0.07);
+}
+[data-theme="dark"] .wings-note { color: #6b6552; }
+
+/* Dark: menu */
+[data-theme="dark"] .menu-tab {
+  border-color: rgba(168,153,104,0.35);
+}
+[data-theme="dark"] .menu-tab.active {
+  color: #1a1a1a;
+}
+[data-theme="dark"] .menu-item {
+  border-bottom-color: rgba(255,255,255,0.04);
+}
+[data-theme="dark"] .menu-item:hover {
+  background: rgba(245,158,11,0.04);
+}
+[data-theme="dark"] .sides-box {
+  background: rgba(245,158,11,0.06);
+}
+[data-theme="dark"] .consumer-advisory { color: #6b6552; }
+
+/* Dark: info section */
+[data-theme="dark"] .info-section {
+  background: linear-gradient(180deg, transparent 0%, rgba(92,58,30,0.06) 100%);
+}
+
+/* Dark: footer */
+[data-theme="dark"] .site-footer {
+  background: transparent;
+}
+
+/* ============================================================
    RESPONSIVE
    ============================================================ */
 @media (max-width: 600px) {
