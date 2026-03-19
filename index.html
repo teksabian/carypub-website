@@ -44,6 +44,7 @@
         <button class="nav-link" data-nav="wings">Wings</button>
         <button class="nav-link" data-nav="menu">Menu</button>
         <button class="nav-link" data-nav="info">Visit</button>
+        <button class="chat-btn" id="chat-open">💬 Chat</button>
         <button class="theme-toggle" id="theme-toggle" aria-label="Toggle dark mode">🌙</button>
       </div>
     </div>
@@ -173,6 +174,15 @@
     <div class="footer-copy">© <span id="footer-year"></span> The Cary Pub — Est. 2013, Cary NC</div>
     <div class="footer-egg" data-egg>🦬 psst... keep clicking</div>
   </footer>
+
+  <!-- Chat Modal -->
+  <div class="chat-modal" id="chat-modal">
+    <div class="chat-modal-backdrop" id="chat-backdrop"></div>
+    <div class="chat-modal-container">
+      <button class="chat-modal-close" id="chat-close">✕</button>
+      <iframe id="chat-iframe" title="Chat with The Bartender"></iframe>
+    </div>
+  </div>
 
   <!-- Scripts: data first, then logic -->
   <script src="js/site-data.js"></script>

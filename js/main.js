@@ -19,6 +19,29 @@ document.getElementById('theme-toggle')?.addEventListener('click', function() {
   this.textContent = next === 'dark' ? '☀️' : '🌙';
 });
 
+// ---- CHAT MODAL ----
+(function() {
+  const modal = document.getElementById('chat-modal');
+  const iframe = document.getElementById('chat-iframe');
+  const openBtn = document.getElementById('chat-open');
+  const closeBtn = document.getElementById('chat-close');
+  const backdrop = document.getElementById('chat-backdrop');
+  let loaded = false;
+
+  function openChat() {
+    if (!loaded) { iframe.src = 'chat.html'; loaded = true; }
+    modal.classList.add('open');
+  }
+  function closeChat() { modal.classList.remove('open'); }
+
+  openBtn?.addEventListener('click', openChat);
+  closeBtn?.addEventListener('click', closeChat);
+  backdrop?.addEventListener('click', closeChat);
+  document.addEventListener('keydown', e => {
+    if (e.key === 'Escape' && modal.classList.contains('open')) closeChat();
+  });
+})();
+
 const DAYS = ["Sunday","Monday","Tuesday","Wednesday","Thursday","Friday","Saturday"];
 const TODAY_INDEX = new Date().getDay();
 
