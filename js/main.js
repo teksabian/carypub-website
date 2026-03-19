@@ -4,7 +4,8 @@
 
 // ---- THEME TOGGLE ----
 (function() {
-  const saved = localStorage.getItem('theme') || 'light';
+  const saved = localStorage.getItem('theme')
+    || (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light');
   document.documentElement.dataset.theme = saved;
   const btn = document.getElementById('theme-toggle');
   if (btn) btn.textContent = saved === 'dark' ? '☀️' : '🌙';
