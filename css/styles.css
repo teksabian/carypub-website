@@ -7,13 +7,13 @@
 :root {
   --gold: #92400E;
   --gold-dark: #78350F;
-  --gold-dim: #57534E;
+  --gold-dim: #78592E;
   --cream: #1C1917;
-  --cream-light: #292524;
-  --bg: #F5F0EB;
-  --bg-card: rgba(0,0,0,0.04);
-  --border-subtle: rgba(0,0,0,0.12);
-  --border-gold: rgba(146,64,14,0.2);
+  --cream-light: #3D2B1F;
+  --bg: #EDE0D1;
+  --bg-card: rgba(146,64,14,0.06);
+  --border-subtle: rgba(146,64,14,0.15);
+  --border-gold: rgba(146,64,14,0.3);
   --red: #991B1B;
   --wood: #8B7355;
   --wood-dark: #6B5B45;
@@ -38,16 +38,16 @@ a:hover { text-decoration: underline; }
 
 /* ---- Scrollbar ---- */
 ::-webkit-scrollbar { width: 8px; }
-::-webkit-scrollbar-track { background: #EDE8E3; }
+::-webkit-scrollbar-track { background: #E0D3C3; }
 ::-webkit-scrollbar-thumb { background: var(--wood); border-radius: 4px; }
 
 /* ---- Background glow ---- */
 .bg-glow {
   position: fixed; inset: 0; pointer-events: none; z-index: 0;
   background:
-    radial-gradient(ellipse at 20% 50%, rgba(146,64,14,0.06) 0%, transparent 50%),
-    radial-gradient(ellipse at 80% 20%, rgba(146,64,14,0.04) 0%, transparent 40%),
-    radial-gradient(ellipse at 50% 80%, rgba(139,115,85,0.08) 0%, transparent 50%);
+    radial-gradient(ellipse at 20% 50%, rgba(146,64,14,0.12) 0%, transparent 50%),
+    radial-gradient(ellipse at 80% 20%, rgba(146,64,14,0.08) 0%, transparent 40%),
+    radial-gradient(ellipse at 50% 80%, rgba(139,115,85,0.15) 0%, transparent 50%);
 }
 
 /* ---- Animations ---- */
@@ -91,15 +91,15 @@ a:hover { text-decoration: underline; }
    ============================================================ */
 .site-nav {
   position: sticky; top: 0; z-index: 100;
-  background: rgba(245,240,235,0.85);
+  background: rgba(237,224,209,0.88);
   backdrop-filter: blur(12px);
-  border-bottom: 1px solid rgba(0,0,0,0.1);
+  border-bottom: 1px solid rgba(146,64,14,0.12);
   transition: all 0.3s;
   padding: 0 16px;
 }
 .site-nav.scrolled {
-  background: rgba(245,240,235,0.97);
-  border-bottom-color: rgba(146,64,14,0.25);
+  background: rgba(237,224,209,0.97);
+  border-bottom-color: rgba(146,64,14,0.3);
 }
 .nav-inner {
   max-width: 900px; margin: 0 auto;
@@ -135,7 +135,7 @@ a:hover { text-decoration: underline; }
 }
 .hero-glow {
   position: absolute; top: 20%; left: 50%; width: 600px; height: 600px;
-  background: radial-gradient(circle, rgba(146,64,14,0.08) 0%, transparent 70%);
+  background: radial-gradient(circle, rgba(146,64,14,0.14) 0%, transparent 70%);
   transform: translate(-50%, -50%); pointer-events: none;
 }
 .hero-logo { animation: beerPour 1s ease both; }
@@ -246,7 +246,7 @@ a:hover { text-decoration: underline; }
 }
 .wings-sizes { display: flex; gap: 16px; justify-content: center; flex-wrap: wrap; margin-bottom: 32px; }
 .wing-size-card {
-  background: #fff; border: 1px solid var(--border-subtle);
+  background: #FBF5ED; border: 1px solid var(--border-subtle);
   border-radius: 12px; padding: 20px 28px; text-align: center; min-width: 120px;
   box-shadow: 0 2px 8px rgba(0,0,0,0.06);
 }
@@ -259,7 +259,7 @@ a:hover { text-decoration: underline; }
   gap: 10px; max-width: 600px; margin: 0 auto 24px;
 }
 .flavor-card {
-  background: #fff; border: 1px solid rgba(0,0,0,0.08);
+  background: #FBF5ED; border: 1px solid rgba(146,64,14,0.1);
   border-radius: 10px; padding: 12px 16px;
   box-shadow: 0 1px 4px rgba(0,0,0,0.05);
 }
@@ -292,7 +292,7 @@ a:hover { text-decoration: underline; }
 .menu-items { max-width: 700px; margin: 0 auto; }
 .menu-item {
   display: flex; justify-content: space-between; align-items: flex-start;
-  padding: 18px 16px; border-bottom: 1px solid rgba(0,0,0,0.06);
+  padding: 18px 16px; border-bottom: 1px solid rgba(146,64,14,0.08);
   transition: background 0.2s; animation: fadeInUp 0.35s ease both;
 }
 .menu-item:hover { background: rgba(146,64,14,0.06); }
@@ -323,7 +323,7 @@ a:hover { text-decoration: underline; }
    ============================================================ */
 .info-section {
   padding: 80px 24px 60px;
-  background: linear-gradient(180deg, transparent 0%, rgba(139,115,85,0.1) 100%);
+  background: linear-gradient(180deg, transparent 0%, rgba(139,115,85,0.18) 100%);
 }
 .info-inner { max-width: 900px; margin: 0 auto; }
 .info-section .header-sub { font-family: var(--font-hand); font-size: 22px; color: var(--red); font-style: italic; text-align: center; }
@@ -338,7 +338,7 @@ a:hover { text-decoration: underline; }
 
 .info-cards { display: flex; flex-direction: column; gap: 16px; }
 .info-card {
-  background: #fff;
+  background: #FBF5ED;
   border: 1px solid var(--border-gold);
   border-radius: 12px; padding: 20px 24px;
   display: flex; align-items: flex-start; gap: 16px;
@@ -357,7 +357,7 @@ a:hover { text-decoration: underline; }
 .site-footer {
   text-align: center; padding: 40px 24px 32px;
   border-top: 1px solid var(--border-subtle);
-  background: rgba(0,0,0,0.03);
+  background: rgba(146,64,14,0.05);
 }
 .footer-tagline { font-family: var(--font-hand); font-size: 20px; color: var(--gold-dim); margin-top: 10px; }
 .footer-copy { font-size: 13px; color: var(--wood); margin-top: 12px; }
